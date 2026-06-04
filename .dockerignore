@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-ssr
+.git
+.agents
+.codex
+*.log
+npm-debug.log*
+Dockerfile
+docker-compose.yml
