@@ -1,7 +1,7 @@
 .hero-shell {
   width: 100%;
+  min-height: calc(100svh - 24px);
   padding: 12px;
-  border-radius: 18px;
   background: #080808;
   color: #0d0d0d;
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
@@ -353,10 +353,6 @@
 }
 
 @media (max-width: 560px) {
-  .hero-shell {
-    padding: 8px;
-    border-radius: 14px;
-  }
 
   .hero-nav {
     gap: 12px;
