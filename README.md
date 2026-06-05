@@ -72,3 +72,6 @@ A entrega deve ser realizada através do formulário disponibilizado pelo profes
 ![alt text](image.png)
 
 ![alt text](image-1.png)
+
+## 6. link pro pages do portifólio
+[Link Portifólio](https://thiago-cordeiro.github.io/ds881-curriculo-GRR20241337/ "Portifólio do melhor do mundo!!!")
