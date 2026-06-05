@@ -1,4 +1,5 @@
 import { HeroSection } from './components/HeroSection'
+import { BentoGallerySection } from './components/BentoGallerySection'
 import { CompaniesSection } from './components/CompaniesSection'
 import { HorizontalTextSection } from './components/HorizontalTextSection'
 import { ProjectsSection } from './components/ProjectsSection'
@@ -10,7 +11,9 @@ function App() {
       <HeroSection />
       <HorizontalTextSection />
       <CompaniesSection />
+      <BentoGallerySection />
       <ProjectsSection />
+      <HorizontalTextSection />
     </main>
   )
 }
