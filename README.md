@@ -78,4 +78,6 @@ A entrega deve ser realizada através do formulário disponibilizado pelo profes
 
 ## 7. Como rodar o projeto local
 
-docker compose up
+-> clone o projeto
+
+-> abra um terminal na pasta do porjeto e rode o comando: docker compose up
