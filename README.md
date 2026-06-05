@@ -75,3 +75,7 @@ A entrega deve ser realizada através do formulário disponibilizado pelo profes
 
 ## 6. link pro pages do portifólio
 [Link Portifólio](https://thiago-cordeiro.github.io/ds881-curriculo-GRR20241337/ "Portifólio do melhor do mundo!!!")
+
+## 7. Como rodar o projeto local
+
+docker compose up
