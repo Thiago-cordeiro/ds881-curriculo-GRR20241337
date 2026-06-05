@@ -1,0 +1,296 @@
+.companies-section {
+  min-height: 100svh;
+  margin-top: 12px;
+  padding: clamp(34px, 6vw, 78px);
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    #080808;
+  background-position:
+    -2px -2px,
+    -2px -2px,
+    -1px -1px,
+    -1px -1px,
+    0 0;
+  background-size:
+    100px 100px,
+    100px 100px,
+    20px 20px,
+    20px 20px,
+    auto;
+  color: #ffffff;
+}
+
+.companies-section__intro {
+  max-width: 980px;
+
+  h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(40px, 7vw, 82px);
+    font-weight: 950;
+    line-height: 0.96;
+    text-transform: uppercase;
+  }
+}
+
+.companies-section__kicker {
+  margin: 0 0 18px;
+  color: #fbec15;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.companies-section__timeline {
+  position: relative;
+  display: grid;
+  gap: 28vh;
+  margin-top: clamp(44px, 8vw, 96px);
+  padding: 12vh 0 16vh;
+}
+
+.companies-section__rail {
+  width: 4px;
+  position: absolute;
+  inset: 0 auto 0 50%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateX(-50%);
+}
+
+.companies-section__rail-fill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #fbec15;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.companies-section__orb {
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #080808;
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, transparent 0 26%, rgba(8, 8, 8, 0.14) 26% 42%, transparent 42%),
+    #fbec15;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.42);
+  color: #080808;
+  font-size: 20px;
+  font-weight: 950;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  will-change: transform;
+}
+
+.company-checkpoint {
+  min-height: 220px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr);
+  align-items: center;
+}
+
+.company-checkpoint__dot {
+  width: 22px;
+  height: 22px;
+  grid-column: 2;
+  justify-self: center;
+  z-index: 3;
+  border: 4px solid #080808;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.26);
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.company-checkpoint:nth-child(even) .company-checkpoint__card {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.company-checkpoint:nth-child(odd) .company-checkpoint__card {
+  grid-column: 3;
+  justify-self: start;
+}
+
+.company-checkpoint__card {
+  width: min(430px, 100%);
+  min-height: 218px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #080808;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+  opacity: 0.72;
+  transform: scale(0.96);
+  transition:
+    background 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+
+  h3 {
+    margin: 8px 0 8px;
+    font-size: clamp(24px, 3vw, 35px);
+    font-weight: 950;
+    line-height: 0.98;
+    text-transform: uppercase;
+  }
+}
+
+.company-checkpoint__logo {
+  width: min(190px, 100%);
+  height: 44px;
+  display: block;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #080808;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.company-checkpoint--active {
+  .company-checkpoint__dot {
+    background: #fbec15;
+    box-shadow:
+      0 0 0 1px #fbec15,
+      0 0 0 12px rgba(251, 236, 21, 0.14);
+    transform: scale(1.2);
+  }
+
+  .company-checkpoint__card {
+    background: #ffffff;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.company-checkpoint__index {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fbec15;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.company-checkpoint__period,
+.company-checkpoint__role,
+.company-checkpoint__summary {
+  margin: 0;
+  font-weight: 850;
+}
+
+.company-checkpoint__period,
+.company-checkpoint__role {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.company-checkpoint__period {
+  color: #626260;
+}
+
+.company-checkpoint__role {
+  color: #080808;
+}
+
+.company-checkpoint__summary {
+  margin-top: 16px;
+  color: #626260;
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+@media (max-width: 920px) {
+  .companies-section__timeline {
+    gap: 26px;
+    padding: 4px 0 0 34px;
+  }
+
+  .companies-section__rail {
+    left: 11px;
+  }
+
+  .companies-section__orb {
+    width: 48px;
+    height: 48px;
+    font-size: 13px;
+  }
+
+  .company-checkpoint {
+    min-height: auto;
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+  }
+
+  .company-checkpoint__dot {
+    grid-column: 1;
+  }
+
+  .company-checkpoint:nth-child(even) .company-checkpoint__card,
+  .company-checkpoint:nth-child(odd) .company-checkpoint__card {
+    grid-column: 2;
+    justify-self: stretch;
+  }
+
+  .company-checkpoint__card {
+    min-height: 210px;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .companies-section {
+    padding: 32px 18px;
+    border-radius: 14px;
+  }
+
+  .companies-section__intro h2 {
+    font-size: 39px;
+  }
+
+  .companies-section__timeline {
+    padding-left: 26px;
+  }
+
+  .companies-section__rail {
+    left: 7px;
+  }
+
+  .company-checkpoint {
+    grid-template-columns: 24px 1fr;
+    gap: 10px;
+  }
+
+  .company-checkpoint__card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    min-height: 238px;
+    padding: 20px;
+  }
+}

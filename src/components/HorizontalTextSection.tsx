@@ -6,7 +6,7 @@ import './HorizontalTextSection.scss'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
-const horizontalText = 'Me da nota 10 prfv ;).';
+const horizontalText = 'Me da nota 10 prfv ;)';
 
 export function HorizontalTextSection() {
   const sectionRef = useRef<HTMLElement>(null)

@@ -14,6 +14,7 @@ export function HeroSection() {
 
         <nav className="hero-menu" aria-label="Navegacao principal">
           <a href="#sobre">Sobre</a>
+          <a href="#experiencia">Experiência</a>
           <a href="#projetos">Projetos</a>
           <a href="#stack">Stack</a>
           <a href="#contato">Contato</a>
